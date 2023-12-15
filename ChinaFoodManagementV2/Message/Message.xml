@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<message>
+	<!--question message-->
+	<contents id="QUES_1001">
+		<icon>Question</icon>
+		<text>終了します。よろしいですか？</text>
+	</contents>
+	<contents id="QUES_1002">
+		<icon>Question</icon>
+		<text>会計します。よろしいですか？</text>
+	</contents>
+	<contents id="QUES_1003">
+		<icon>Question</icon>
+		<text>割引を適用します。よろしいですか？</text>
+	</contents>
+	<contents id="QUES_1004">
+		<icon>Question</icon>
+		<text>テーブルをチェンジします。よろしいですか？</text>
+	</contents>
+	<contents id="QUES_1005">
+		<icon>Question</icon>
+		<text>更新します。よろしいですか？</text>
+	</contents>
+	<contents id="QUES_1006">
+		<icon>Question</icon>
+		<text>削除します。よろしいですか？</text>
+	</contents>
+	<contents id="QUES_1007">
+		<icon>Question</icon>
+		<text>ユーザーを追加します。よろしいですか？</text>
+	</contents>
+	<contents id="QUES_1008">
+		<icon>Question</icon>
+		<text>パスワードをリセットします。よろしいですか？</text>
+	</contents>
+
+	<!--Error message-->
+	<contents id="ERR_2001">
+		<icon>Error</icon>
+		<text></text>
+	</contents>
+	<contents id="ERR_2002">
+		<icon>Error</icon>
+		<text>パスワードは入力されていません。</text>
+	</contents>
+	<contents id="ERR_2003">
+		<icon>Error</icon>
+		<text>ユーザー名またはパスワード一致しません。</text>
+	</contents>
+	<contents id="ERR_2004">
+		<icon>Error</icon>
+		<text>料理を追加する前に数を選択してください。。</text>
+	</contents>
+	<contents id="ERR_2005">
+		<icon>Error</icon>
+		<text>会計する伝票は存在しません。</text>
+	</contents>
+	<contents id="ERR_2006">
+		<icon>Error</icon>
+		<text>料理を追加する前にテーブルを選択してください。</text>
+	</contents>
+	<contents id="ERR_2007">
+		<icon>Error</icon>
+		<text>必須項目が入力されていません。</text>
+	</contents>
+	<contents id="ERR_2008">
+		<icon>Error</icon>
+		<text>パスワードは６文字以上、少なくとも1つの大 文字、1つの数字を含める必要があります。</text>
+	</contents>
+	<contents id="ERR_2009">
+		<icon>Error</icon>
+		<text>新パスワードと再入力パスワードが一致しません。</text>
+	</contents>
+	<contents id="ERR_2010">
+		<icon>Error</icon>
+		<text>新パスワードと旧パスワードが同じになっています。</text>
+	</contents>
+	<contents id="ERR_2011">
+		<icon>Error</icon>
+		<text>パスワードは間違っています。</text>
+	</contents>
+	<contents id="ERR_2012">
+		<icon>Error</icon>
+		<text>このユーザー名が重複されています。他のユーザー名にしてください</text>
+	</contents>
+	<contents id="ERR_2013">
+		<icon>Error</icon>
+		<text>ログインされているアカウントを削除できません。</text>
+	</contents>
+	<contents id="ERR_2014">
+		<icon>Error</icon>
+		<text>５回以上間違っています。管理者に連絡してパスワードのリセットを行っていただいてください。</text>
+	</contents>
+	<contents id="ERR_2015">
+		<icon>Error</icon>
+		<text>フォーマットが間違っています。</text>
+	</contents>
+	<contents id="ERR_2016">
+		<icon>Error</icon>
+		<text>今日からの時間を選ばなければなりません。</text>
+	</contents>
+	<contents id="ERR_2017">
+		<icon>Error</icon>
+		<text>2ヶ月以内のご予約のみ受付可能です。</text>
+	</contents>
+	<contents id="ERR_9999">
+		<icon>Error</icon>
+		<text>例外処理が発生しました。。</text>
+	</contents>
+	
+	<!--Info message-->
+	<contents id="INF_3001">
+		<icon>Info</icon>
+		<text>会計が完了しました。</text>
+	</contents>
+	<contents id="INF_3002">
+		<icon>Info</icon>
+		<text>追加されました。</text>
+	</contents>
+	<contents id="INF_3003">
+		<icon>Info</icon>
+		<text>更新が完了しました。</text>
+	</contents>
+	<contents id="INF_3004">
+		<icon>Info</icon>
+		<text>削除されました。</text>
+	</contents>
+	<contents id="INF_3005">
+		<icon>Info</icon>
+		<text>パスワードがリセットされました。</text>
+	</contents>
+	<contents id="INF_3006">
+		<icon>Info</icon>
+		<text>アカウント情報でパスワード再設定を行ってください。</text>
+	</contents>
+</message>
