@@ -5,7 +5,12 @@ using ChinaFoodManagementV2.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Windows.Forms;
+using OfficeOpenXml;
+using System.IO;
+using System.Linq;
+using OfficeOpenXml.Style;
 
 namespace ChinaFoodManagementV2
 {
@@ -222,6 +227,94 @@ namespace ChinaFoodManagementV2
         {
             this.Close();
             this.Dispose();
+        }
+
+        private void ExportExcelSub(ExcelPackage package)
+        {
+            var workbook = package.Workbook;
+
+            ExcelWorksheet existingSheet = workbook.Worksheets.FirstOrDefault(sheet => sheet.Name == "Sheet1");
+            if (existingSheet != null)
+            {
+                // Nếu tồn tại, xóa sheet đó đi
+                workbook.Worksheets.Delete(existingSheet);
+            }
+            var worksheet = workbook.Worksheets.Add("Sheet1");
+
+            BillDAO billDAO = new BillDAO();
+            List<BillMngDTO> billMngDTOs = billDAO.GetAllBill();
+
+            // Tạo column 
+            string[] headerColumn = { "伝票番号", "テーブル名", "会計時間", "割引率", "小計" };
+            for(int i = 0; i < headerColumn.Length; i++)
+            {
+                worksheet.Cells[1, i + 1].Value = headerColumn[i];
+            }
+
+            // Ghi dữ liệu vào Excel
+            int row = 2;
+            foreach (var item in billMngDTOs)
+            {
+                worksheet.Cells[row, 1].Value = item.BillId;
+                worksheet.Cells[row, 2].Value = item.TableName;
+                worksheet.Cells[row, 3].Value = item.CheckoutDate.Value.ToString("yyyy/MM/dd");
+                worksheet.Cells[row, 4].Value = item.Discount;
+                worksheet.Cells[row, 5].Value = item.Total;
+
+                row++;
+            }
+
+            // Căn lề trái cho all cell
+            foreach (var cell in worksheet.Cells)
+            {
+                cell.Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
+            }
+
+        }
+
+        public void ExportExcel()
+        {
+            // Lưu file Excel
+            string date = DateTime.Now.ToString("yyyyMMdd");
+            string fileName = $"Bill_{date}.xlsx" ;
+            string filePath = $"C:\\export_ex\\{fileName}";
+
+            if (File.Exists(filePath))
+            {
+                DialogResult result = MessageBox.Show("File đã tồn tại. Bạn có muốn ghi đè không?", "Xác nhận", MessageBoxButtons.OKCancel);
+
+                if (result == DialogResult.OK)
+                {
+                    // Nếu người dùng chọn OK, ghi đè file
+                    using (var package = new ExcelPackage(new FileInfo(filePath)))
+                    {
+                        ExportExcelSub(package);
+
+                        // Lưu file Excel
+                        package.Save();
+                    }
+
+                    MessageBox.Show("Ghi đè file thành công.", "Thông báo", MessageBoxButtons.OK);
+                }
+            }
+            else
+            {
+                // Nếu file không tồn tại, tiến hành tạo file mới và lưu dữ liệu
+                using (var package = new ExcelPackage(filePath))
+                {
+                    ExportExcelSub(package);
+
+                    // Lưu file Excel
+                    package.Save();
+                }
+
+                MessageBox.Show("File đã được tạo mới thành công.", "Thông báo", MessageBoxButtons.OK);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ExportExcel();
         }
     }
 }

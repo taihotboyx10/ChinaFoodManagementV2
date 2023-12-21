@@ -78,6 +78,11 @@
             this.label16 = new System.Windows.Forms.Label();
             this.cboCategoryFood = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dgvFood = new System.Windows.Forms.DataGridView();
+            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.colFoodId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtFoodName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtFoodPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -133,11 +138,7 @@
             this.btnAccountUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.btnAccountView = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDelete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.colFoodId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             this.guna2TabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -188,6 +189,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.lblTotalCase);
             this.tabPage1.Controls.Add(this.dgvEarning);
@@ -763,6 +765,53 @@
             this.dgvFood.Size = new System.Drawing.Size(553, 441);
             this.dgvFood.TabIndex = 26;
             this.dgvFood.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFood_CellClick);
+            // 
+            // colName
+            // 
+            this.colName.DataPropertyName = "FoodName";
+            this.colName.HeaderText = "料理名";
+            this.colName.MinimumWidth = 6;
+            this.colName.Name = "colName";
+            this.colName.ReadOnly = true;
+            this.colName.Width = 142;
+            // 
+            // colCategory
+            // 
+            this.colCategory.DataPropertyName = "CategoryName";
+            this.colCategory.HeaderText = "カテゴリ名";
+            this.colCategory.MinimumWidth = 6;
+            this.colCategory.Name = "colCategory";
+            this.colCategory.ReadOnly = true;
+            this.colCategory.Width = 120;
+            // 
+            // colPrice
+            // 
+            this.colPrice.DataPropertyName = "Price";
+            this.colPrice.HeaderText = "単価(税込)";
+            this.colPrice.MinimumWidth = 6;
+            this.colPrice.Name = "colPrice";
+            this.colPrice.ReadOnly = true;
+            this.colPrice.Width = 80;
+            // 
+            // colDelete
+            // 
+            this.colDelete.HeaderText = "削除";
+            this.colDelete.MinimumWidth = 6;
+            this.colDelete.Name = "colDelete";
+            this.colDelete.ReadOnly = true;
+            this.colDelete.Text = "✕";
+            this.colDelete.UseColumnTextForButtonValue = true;
+            this.colDelete.Width = 70;
+            // 
+            // colFoodId
+            // 
+            this.colFoodId.DataPropertyName = "FoodId";
+            this.colFoodId.HeaderText = "food_id";
+            this.colFoodId.MinimumWidth = 6;
+            this.colFoodId.Name = "colFoodId";
+            this.colFoodId.ReadOnly = true;
+            this.colFoodId.Visible = false;
+            this.colFoodId.Width = 125;
             // 
             // txtFoodName
             // 
@@ -1706,52 +1755,15 @@
             this.guna2Button1.Text = "戻る";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // colName
+            // button1
             // 
-            this.colName.DataPropertyName = "FoodName";
-            this.colName.HeaderText = "料理名";
-            this.colName.MinimumWidth = 6;
-            this.colName.Name = "colName";
-            this.colName.ReadOnly = true;
-            this.colName.Width = 142;
-            // 
-            // colCategory
-            // 
-            this.colCategory.DataPropertyName = "CategoryName";
-            this.colCategory.HeaderText = "カテゴリ名";
-            this.colCategory.MinimumWidth = 6;
-            this.colCategory.Name = "colCategory";
-            this.colCategory.ReadOnly = true;
-            this.colCategory.Width = 120;
-            // 
-            // colPrice
-            // 
-            this.colPrice.DataPropertyName = "Price";
-            this.colPrice.HeaderText = "単価(税込)";
-            this.colPrice.MinimumWidth = 6;
-            this.colPrice.Name = "colPrice";
-            this.colPrice.ReadOnly = true;
-            this.colPrice.Width = 80;
-            // 
-            // colDelete
-            // 
-            this.colDelete.HeaderText = "削除";
-            this.colDelete.MinimumWidth = 6;
-            this.colDelete.Name = "colDelete";
-            this.colDelete.ReadOnly = true;
-            this.colDelete.Text = "✕";
-            this.colDelete.UseColumnTextForButtonValue = true;
-            this.colDelete.Width = 70;
-            // 
-            // colFoodId
-            // 
-            this.colFoodId.DataPropertyName = "FoodId";
-            this.colFoodId.HeaderText = "food_id";
-            this.colFoodId.MinimumWidth = 6;
-            this.colFoodId.Name = "colFoodId";
-            this.colFoodId.ReadOnly = true;
-            this.colFoodId.Visible = false;
-            this.colFoodId.Width = 125;
+            this.button1.Location = new System.Drawing.Point(7, 495);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 37);
+            this.button1.TabIndex = 40;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmAdminManagement
             // 
@@ -1892,5 +1904,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrice;
         private System.Windows.Forms.DataGridViewButtonColumn colDelete;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFoodId;
+        private System.Windows.Forms.Button button1;
     }
 }

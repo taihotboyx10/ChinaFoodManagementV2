@@ -54,7 +54,7 @@ namespace ChinaFoodManagementV2
                 dt.Rows.Add(row);
             }
 
-            UriageRv.LocalReport.ReportEmbeddedResource = "ChinaFoodManagementV2.BillRpt.rdlc";
+            UriageRv.LocalReport.ReportEmbeddedResource = "ChinaFoodManagementV2.BillReport.rdlc";
             // Kết nối DataSet với ReportDataSource
             ReportDataSource reportDataSource = new ReportDataSource("aaa", ds.Tables[0]);
 
