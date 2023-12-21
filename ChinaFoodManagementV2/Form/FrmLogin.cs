@@ -101,9 +101,9 @@ namespace ChinaFoodManagementV2
             if (CheckLoginAcount())
             {
                 loginError = 0;
+                FrmMain frmMain = new FrmMain(txtUserName.Text);
                 txtUserName.Text = "";
                 txtPassword.Text = "";
-                FrmMain frmMain = new FrmMain();
                 frmMain.FormClosed += FrmMain_FormClosed;
                 frmMain.Show();
                 this.Hide();

@@ -64,6 +64,8 @@
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.txtCashier = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmrFoodNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMain)).BeginInit();
@@ -75,7 +77,7 @@
             this.pnlTable.Location = new System.Drawing.Point(16, 42);
             this.pnlTable.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pnlTable.Name = "pnlTable";
-            this.pnlTable.Size = new System.Drawing.Size(569, 549);
+            this.pnlTable.Size = new System.Drawing.Size(569, 520);
             this.pnlTable.TabIndex = 2;
             // 
             // menuStrip1
@@ -119,6 +121,7 @@
             this.個人情報ToolStripMenuItem.Name = "個人情報ToolStripMenuItem";
             this.個人情報ToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
             this.個人情報ToolStripMenuItem.Text = "アカウント情報";
+            this.個人情報ToolStripMenuItem.Click += new System.EventHandler(this.個人情報ToolStripMenuItem_Click);
             // 
             // ログアウトToolStripMenuItem
             // 
@@ -492,6 +495,26 @@
             this.txtCashier.Size = new System.Drawing.Size(152, 29);
             this.txtCashier.TabIndex = 48;
             // 
+            // lblUserName
+            // 
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Font = new System.Drawing.Font("Meiryo UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblUserName.Location = new System.Drawing.Point(137, 574);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(59, 22);
+            this.lblUserName.TabIndex = 49;
+            this.lblUserName.Text = "label8";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Meiryo UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label8.Location = new System.Drawing.Point(12, 574);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(119, 22);
+            this.label8.TabIndex = 50;
+            this.label8.Text = "ログインユーザ：";
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -499,6 +522,8 @@
             this.BackColor = System.Drawing.Color.Orange;
             this.ClientSize = new System.Drawing.Size(1253, 605);
             this.ControlBox = false;
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.txtCashier);
             this.Controls.Add(this.dgvMain);
             this.Controls.Add(this.label7);
@@ -521,6 +546,7 @@
             this.Controls.Add(this.cboTableBase);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.pnlTable);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "中華料理管理";
@@ -568,5 +594,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.DataGridViewButtonColumn ColDelete;
         private Guna.UI2.WinForms.Guna2TextBox txtCashier;
+        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.Label label8;
     }
 }

@@ -29,24 +29,34 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdminManagement));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle64 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtFilTer = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnFilterCondClear = new Guna.UI2.WinForms.Guna2Button();
+            this.rdBillId = new System.Windows.Forms.RadioButton();
+            this.rdTableName = new System.Windows.Forms.RadioButton();
+            this.lblTotalCase = new System.Windows.Forms.Label();
             this.dgvEarning = new System.Windows.Forms.DataGridView();
+            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.rdDesc = new System.Windows.Forms.RadioButton();
             this.rdAsc = new System.Windows.Forms.RadioButton();
             this.cboEarningSort = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.lblTotalCase = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.lblFirstPage = new System.Windows.Forms.Label();
@@ -63,17 +73,11 @@
             this.btnFilterByDateToDate = new Guna.UI2.WinForms.Guna2Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnClear = new Guna.UI2.WinForms.Guna2Button();
-            this.txtFoodId = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.cboCategoryFood = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dgvFood = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtFoodName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtFoodPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -82,9 +86,7 @@
             this.btnFoodSearch = new Guna.UI2.WinForms.Guna2Button();
             this.txtFoodSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnFoodAdd = new Guna.UI2.WinForms.Guna2Button();
-            this.btnFoodDelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnFoodUpdate = new Guna.UI2.WinForms.Guna2Button();
-            this.btnFoodView = new Guna.UI2.WinForms.Guna2Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvCategory = new System.Windows.Forms.DataGridView();
@@ -131,13 +133,14 @@
             this.btnAccountUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.btnAccountView = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.colFoodId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2TabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEarning)).BeginInit();
             this.panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -163,7 +166,7 @@
             this.guna2TabControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.guna2TabControl1.Name = "guna2TabControl1";
             this.guna2TabControl1.SelectedIndex = 0;
-            this.guna2TabControl1.Size = new System.Drawing.Size(1119, 544);
+            this.guna2TabControl1.Size = new System.Drawing.Size(1119, 546);
             this.guna2TabControl1.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.guna2TabControl1.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.guna2TabControl1.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -185,12 +188,13 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Controls.Add(this.lblTotalCase);
             this.tabPage1.Controls.Add(this.dgvEarning);
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.cboEarningSort);
             this.tabPage1.Controls.Add(this.label25);
             this.tabPage1.Controls.Add(this.label26);
-            this.tabPage1.Controls.Add(this.lblTotalCase);
             this.tabPage1.Controls.Add(this.label24);
             this.tabPage1.Controls.Add(this.label22);
             this.tabPage1.Controls.Add(this.lblFirstPage);
@@ -209,10 +213,98 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tabPage1.Size = new System.Drawing.Size(961, 536);
+            this.tabPage1.Size = new System.Drawing.Size(961, 538);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "売上";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtFilTer);
+            this.groupBox1.Controls.Add(this.btnFilterCondClear);
+            this.groupBox1.Controls.Add(this.rdBillId);
+            this.groupBox1.Controls.Add(this.rdTableName);
+            this.groupBox1.Font = new System.Drawing.Font("Meiryo UI", 10F);
+            this.groupBox1.Location = new System.Drawing.Point(11, 238);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(192, 125);
+            this.groupBox1.TabIndex = 39;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "検索";
+            // 
+            // txtFilTer
+            // 
+            this.txtFilTer.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFilTer.DefaultText = "";
+            this.txtFilTer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFilTer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFilTer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFilTer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFilTer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFilTer.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFilTer.ForeColor = System.Drawing.Color.Black;
+            this.txtFilTer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFilTer.Location = new System.Drawing.Point(7, 88);
+            this.txtFilTer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtFilTer.Name = "txtFilTer";
+            this.txtFilTer.PasswordChar = '\0';
+            this.txtFilTer.PlaceholderText = "";
+            this.txtFilTer.SelectedText = "";
+            this.txtFilTer.Size = new System.Drawing.Size(178, 29);
+            this.txtFilTer.TabIndex = 41;
+            this.txtFilTer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtFilTer_KeyDown);
+            // 
+            // btnFilterCondClear
+            // 
+            this.btnFilterCondClear.BorderRadius = 10;
+            this.btnFilterCondClear.BorderThickness = 2;
+            this.btnFilterCondClear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFilterCondClear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFilterCondClear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFilterCondClear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFilterCondClear.FillColor = System.Drawing.Color.Orange;
+            this.btnFilterCondClear.Font = new System.Drawing.Font("Meiryo UI", 10F);
+            this.btnFilterCondClear.ForeColor = System.Drawing.Color.Black;
+            this.btnFilterCondClear.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnFilterCondClear.Location = new System.Drawing.Point(105, 28);
+            this.btnFilterCondClear.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnFilterCondClear.Name = "btnFilterCondClear";
+            this.btnFilterCondClear.Size = new System.Drawing.Size(80, 33);
+            this.btnFilterCondClear.TabIndex = 40;
+            this.btnFilterCondClear.Text = "クリア";
+            this.btnFilterCondClear.Click += new System.EventHandler(this.btnFilterCondClear_Click);
+            // 
+            // rdBillId
+            // 
+            this.rdBillId.AutoSize = true;
+            this.rdBillId.Checked = true;
+            this.rdBillId.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.rdBillId.Location = new System.Drawing.Point(7, 28);
+            this.rdBillId.Name = "rdBillId";
+            this.rdBillId.Size = new System.Drawing.Size(90, 23);
+            this.rdBillId.TabIndex = 3;
+            this.rdBillId.TabStop = true;
+            this.rdBillId.Text = "伝票番号";
+            this.rdBillId.UseVisualStyleBackColor = true;
+            // 
+            // rdTableName
+            // 
+            this.rdTableName.AutoSize = true;
+            this.rdTableName.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.rdTableName.Location = new System.Drawing.Point(7, 58);
+            this.rdTableName.Name = "rdTableName";
+            this.rdTableName.Size = new System.Drawing.Size(91, 23);
+            this.rdTableName.TabIndex = 2;
+            this.rdTableName.Text = "テーブル名";
+            this.rdTableName.UseVisualStyleBackColor = true;
+            // 
+            // lblTotalCase
+            // 
+            this.lblTotalCase.AutoSize = true;
+            this.lblTotalCase.Location = new System.Drawing.Point(729, 513);
+            this.lblTotalCase.Name = "lblTotalCase";
+            this.lblTotalCase.Size = new System.Drawing.Size(0, 15);
+            this.lblTotalCase.TabIndex = 38;
             // 
             // dgvEarning
             // 
@@ -231,25 +323,71 @@
             this.dgvEarning.RowHeadersVisible = false;
             this.dgvEarning.RowHeadersWidth = 51;
             this.dgvEarning.RowTemplate.Height = 24;
-            this.dgvEarning.Size = new System.Drawing.Size(693, 478);
+            this.dgvEarning.Size = new System.Drawing.Size(693, 490);
             this.dgvEarning.TabIndex = 37;
+            // 
+            // colId
+            // 
+            this.colId.DataPropertyName = "BillId";
+            this.colId.HeaderText = "伝票番号";
+            this.colId.MinimumWidth = 6;
+            this.colId.Name = "colId";
+            this.colId.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colId.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "TableName";
+            this.Column2.HeaderText = "テーブル";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column2.Width = 125;
+            // 
+            // colDate
+            // 
+            this.colDate.DataPropertyName = "CheckoutDate";
+            this.colDate.HeaderText = "入店日";
+            this.colDate.MinimumWidth = 6;
+            this.colDate.Name = "colDate";
+            this.colDate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colDate.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Discount";
+            this.Column4.HeaderText = "割引";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column4.Width = 125;
+            // 
+            // colTotal
+            // 
+            this.colTotal.DataPropertyName = "Total";
+            this.colTotal.HeaderText = "合計金額";
+            this.colTotal.MinimumWidth = 6;
+            this.colTotal.Name = "colTotal";
+            this.colTotal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colTotal.Width = 125;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.rdDesc);
             this.panel1.Controls.Add(this.rdAsc);
-            this.panel1.Location = new System.Drawing.Point(82, 338);
+            this.panel1.Location = new System.Drawing.Point(82, 413);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(121, 54);
+            this.panel1.Size = new System.Drawing.Size(121, 61);
             this.panel1.TabIndex = 36;
             // 
             // rdDesc
             // 
             this.rdDesc.AutoSize = true;
             this.rdDesc.Checked = true;
+            this.rdDesc.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.rdDesc.Location = new System.Drawing.Point(3, 7);
             this.rdDesc.Name = "rdDesc";
-            this.rdDesc.Size = new System.Drawing.Size(58, 19);
+            this.rdDesc.Size = new System.Drawing.Size(60, 23);
             this.rdDesc.TabIndex = 1;
             this.rdDesc.TabStop = true;
             this.rdDesc.Text = "降順";
@@ -259,9 +397,10 @@
             // rdAsc
             // 
             this.rdAsc.AutoSize = true;
+            this.rdAsc.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.rdAsc.Location = new System.Drawing.Point(3, 32);
             this.rdAsc.Name = "rdAsc";
-            this.rdAsc.Size = new System.Drawing.Size(58, 19);
+            this.rdAsc.Size = new System.Drawing.Size(60, 23);
             this.rdAsc.TabIndex = 0;
             this.rdAsc.Text = "昇順";
             this.rdAsc.UseVisualStyleBackColor = true;
@@ -274,7 +413,7 @@
             "伝票番号",
             "入店日",
             "合計金額"});
-            this.cboEarningSort.Location = new System.Drawing.Point(82, 309);
+            this.cboEarningSort.Location = new System.Drawing.Point(82, 384);
             this.cboEarningSort.Name = "cboEarningSort";
             this.cboEarningSort.Size = new System.Drawing.Size(121, 23);
             this.cboEarningSort.TabIndex = 35;
@@ -284,7 +423,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Meiryo UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label25.Location = new System.Drawing.Point(7, 310);
+            this.label25.Location = new System.Drawing.Point(7, 385);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(71, 22);
             this.label25.TabIndex = 34;
@@ -294,26 +433,17 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label26.Location = new System.Drawing.Point(664, 500);
+            this.label26.Location = new System.Drawing.Point(664, 509);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(76, 19);
             this.label26.TabIndex = 33;
             this.label26.Text = "(総件数：";
             // 
-            // lblTotalCase
-            // 
-            this.lblTotalCase.AutoSize = true;
-            this.lblTotalCase.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblTotalCase.Location = new System.Drawing.Point(742, 500);
-            this.lblTotalCase.Name = "lblTotalCase";
-            this.lblTotalCase.Size = new System.Drawing.Size(0, 19);
-            this.lblTotalCase.TabIndex = 32;
-            // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label24.Location = new System.Drawing.Point(771, 500);
+            this.label24.Location = new System.Drawing.Point(771, 509);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(24, 19);
             this.label24.TabIndex = 31;
@@ -323,7 +453,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label22.Location = new System.Drawing.Point(594, 500);
+            this.label22.Location = new System.Drawing.Point(594, 509);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(60, 19);
             this.label22.TabIndex = 30;
@@ -333,7 +463,7 @@
             // 
             this.lblFirstPage.AutoSize = true;
             this.lblFirstPage.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblFirstPage.Location = new System.Drawing.Point(529, 500);
+            this.lblFirstPage.Location = new System.Drawing.Point(529, 509);
             this.lblFirstPage.Name = "lblFirstPage";
             this.lblFirstPage.Size = new System.Drawing.Size(18, 19);
             this.lblFirstPage.TabIndex = 29;
@@ -343,7 +473,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label23.Location = new System.Drawing.Point(548, 500);
+            this.label23.Location = new System.Drawing.Point(548, 509);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(16, 19);
             this.label23.TabIndex = 28;
@@ -353,7 +483,7 @@
             // 
             this.lblLastPage.AutoSize = true;
             this.lblLastPage.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblLastPage.Location = new System.Drawing.Point(570, 500);
+            this.lblLastPage.Location = new System.Drawing.Point(570, 509);
             this.lblLastPage.Name = "lblLastPage";
             this.lblLastPage.Size = new System.Drawing.Size(18, 19);
             this.lblLastPage.TabIndex = 27;
@@ -363,7 +493,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label21.Location = new System.Drawing.Point(517, 500);
+            this.label21.Location = new System.Drawing.Point(517, 509);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(16, 19);
             this.label21.TabIndex = 26;
@@ -379,7 +509,7 @@
             this.btnNext.FillColor = System.Drawing.Color.Transparent;
             this.btnNext.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ForeColor = System.Drawing.Color.Black;
-            this.btnNext.Location = new System.Drawing.Point(395, 492);
+            this.btnNext.Location = new System.Drawing.Point(395, 501);
             this.btnNext.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(115, 35);
@@ -397,7 +527,7 @@
             this.btnPrevious.FillColor = System.Drawing.Color.Transparent;
             this.btnPrevious.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrevious.ForeColor = System.Drawing.Color.Black;
-            this.btnPrevious.Location = new System.Drawing.Point(261, 492);
+            this.btnPrevious.Location = new System.Drawing.Point(261, 501);
             this.btnPrevious.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnPrevious.Name = "btnPrevious";
             this.btnPrevious.Size = new System.Drawing.Size(115, 35);
@@ -499,8 +629,6 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.btnClear);
-            this.tabPage2.Controls.Add(this.txtFoodId);
-            this.tabPage2.Controls.Add(this.label15);
             this.tabPage2.Controls.Add(this.label18);
             this.tabPage2.Controls.Add(this.label17);
             this.tabPage2.Controls.Add(this.label16);
@@ -514,14 +642,12 @@
             this.tabPage2.Controls.Add(this.btnFoodSearch);
             this.tabPage2.Controls.Add(this.txtFoodSearch);
             this.tabPage2.Controls.Add(this.btnFoodAdd);
-            this.tabPage2.Controls.Add(this.btnFoodDelete);
             this.tabPage2.Controls.Add(this.btnFoodUpdate);
-            this.tabPage2.Controls.Add(this.btnFoodView);
             this.tabPage2.Location = new System.Drawing.Point(154, 4);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tabPage2.Size = new System.Drawing.Size(961, 536);
+            this.tabPage2.Size = new System.Drawing.Size(961, 538);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "料理";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -537,51 +663,19 @@
             this.btnClear.FillColor = System.Drawing.Color.Orange;
             this.btnClear.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.Black;
-            this.btnClear.Location = new System.Drawing.Point(747, 327);
+            this.btnClear.Location = new System.Drawing.Point(747, 267);
             this.btnClear.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(115, 43);
             this.btnClear.TabIndex = 35;
             this.btnClear.Text = "クリア";
             // 
-            // txtFoodId
-            // 
-            this.txtFoodId.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFoodId.DefaultText = "";
-            this.txtFoodId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtFoodId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtFoodId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFoodId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFoodId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFoodId.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFoodId.ForeColor = System.Drawing.Color.Black;
-            this.txtFoodId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFoodId.Location = new System.Drawing.Point(708, 91);
-            this.txtFoodId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtFoodId.Name = "txtFoodId";
-            this.txtFoodId.PasswordChar = '\0';
-            this.txtFoodId.PlaceholderText = "";
-            this.txtFoodId.ReadOnly = true;
-            this.txtFoodId.SelectedText = "";
-            this.txtFoodId.Size = new System.Drawing.Size(185, 35);
-            this.txtFoodId.TabIndex = 1;
-            // 
-            // label15
-            // 
-            this.label15.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(575, 99);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(104, 20);
-            this.label15.TabIndex = 34;
-            this.label15.Text = "料理番号";
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Red;
-            this.label18.Location = new System.Drawing.Point(672, 277);
+            this.label18.Location = new System.Drawing.Point(672, 217);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(27, 22);
@@ -593,7 +687,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Red;
-            this.label17.Location = new System.Drawing.Point(656, 218);
+            this.label17.Location = new System.Drawing.Point(656, 158);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(27, 22);
@@ -605,7 +699,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Red;
-            this.label16.Location = new System.Drawing.Point(653, 159);
+            this.label16.Location = new System.Drawing.Point(653, 99);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(27, 22);
@@ -619,10 +713,10 @@
             this.cboCategoryFood.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCategoryFood.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cboCategoryFood.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboCategoryFood.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cboCategoryFood.Font = new System.Drawing.Font("Meiryo UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCategoryFood.ForeColor = System.Drawing.Color.Black;
             this.cboCategoryFood.ItemHeight = 24;
-            this.cboCategoryFood.Location = new System.Drawing.Point(708, 211);
+            this.cboCategoryFood.Location = new System.Drawing.Point(708, 151);
             this.cboCategoryFood.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cboCategoryFood.Name = "cboCategoryFood";
             this.cboCategoryFood.Size = new System.Drawing.Size(184, 30);
@@ -633,29 +727,30 @@
             this.dgvFood.AllowUserToAddRows = false;
             this.dgvFood.AllowUserToResizeRows = false;
             this.dgvFood.BackgroundColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle57.BackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle57.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle57.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle57.SelectionBackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle57.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle57.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFood.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle57;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFood.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvFood.ColumnHeadersHeight = 30;
             this.dgvFood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvFood.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            dataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle58.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle58.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle58.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle58.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle58.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle58.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvFood.DefaultCellStyle = dataGridViewCellStyle58;
+            this.colName,
+            this.colCategory,
+            this.colPrice,
+            this.colDelete,
+            this.colFoodId});
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFood.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgvFood.EnableHeadersVisualStyles = false;
             this.dgvFood.Location = new System.Drawing.Point(13, 91);
             this.dgvFood.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -667,42 +762,7 @@
             this.dgvFood.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvFood.Size = new System.Drawing.Size(553, 441);
             this.dgvFood.TabIndex = 26;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "料理番号";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 70;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "food_name";
-            this.dataGridViewTextBoxColumn2.HeaderText = "料理名";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 142;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "category_name";
-            this.dataGridViewTextBoxColumn3.HeaderText = "カテゴリ名";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 120;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "price";
-            this.dataGridViewTextBoxColumn4.HeaderText = "単価(税込)";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 80;
+            this.dgvFood.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFood_CellClick);
             // 
             // txtFoodName
             // 
@@ -716,7 +776,7 @@
             this.txtFoodName.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFoodName.ForeColor = System.Drawing.Color.Black;
             this.txtFoodName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFoodName.Location = new System.Drawing.Point(708, 151);
+            this.txtFoodName.Location = new System.Drawing.Point(708, 91);
             this.txtFoodName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtFoodName.Name = "txtFoodName";
             this.txtFoodName.PasswordChar = '\0';
@@ -737,7 +797,7 @@
             this.txtFoodPrice.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFoodPrice.ForeColor = System.Drawing.Color.Black;
             this.txtFoodPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFoodPrice.Location = new System.Drawing.Point(708, 271);
+            this.txtFoodPrice.Location = new System.Drawing.Point(708, 211);
             this.txtFoodPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtFoodPrice.Name = "txtFoodPrice";
             this.txtFoodPrice.PasswordChar = '\0';
@@ -749,7 +809,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(575, 160);
+            this.label3.Location = new System.Drawing.Point(575, 100);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 20);
@@ -759,7 +819,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(575, 218);
+            this.label2.Location = new System.Drawing.Point(575, 158);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 20);
@@ -769,7 +829,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(575, 276);
+            this.label1.Location = new System.Drawing.Point(575, 216);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 20);
@@ -832,24 +892,7 @@
             this.btnFoodAdd.Size = new System.Drawing.Size(115, 43);
             this.btnFoodAdd.TabIndex = 19;
             this.btnFoodAdd.Text = "追加";
-            // 
-            // btnFoodDelete
-            // 
-            this.btnFoodDelete.BorderRadius = 15;
-            this.btnFoodDelete.BorderThickness = 2;
-            this.btnFoodDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnFoodDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnFoodDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnFoodDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnFoodDelete.FillColor = System.Drawing.Color.Orange;
-            this.btnFoodDelete.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFoodDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnFoodDelete.Location = new System.Drawing.Point(136, 18);
-            this.btnFoodDelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnFoodDelete.Name = "btnFoodDelete";
-            this.btnFoodDelete.Size = new System.Drawing.Size(115, 43);
-            this.btnFoodDelete.TabIndex = 18;
-            this.btnFoodDelete.Text = "削除";
+            this.btnFoodAdd.Click += new System.EventHandler(this.btnFoodAdd_Click);
             // 
             // btnFoodUpdate
             // 
@@ -862,30 +905,13 @@
             this.btnFoodUpdate.FillColor = System.Drawing.Color.Orange;
             this.btnFoodUpdate.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFoodUpdate.ForeColor = System.Drawing.Color.Black;
-            this.btnFoodUpdate.Location = new System.Drawing.Point(259, 18);
+            this.btnFoodUpdate.Location = new System.Drawing.Point(157, 16);
             this.btnFoodUpdate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnFoodUpdate.Name = "btnFoodUpdate";
             this.btnFoodUpdate.Size = new System.Drawing.Size(115, 43);
             this.btnFoodUpdate.TabIndex = 17;
             this.btnFoodUpdate.Text = "更新";
-            // 
-            // btnFoodView
-            // 
-            this.btnFoodView.BorderRadius = 15;
-            this.btnFoodView.BorderThickness = 2;
-            this.btnFoodView.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnFoodView.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnFoodView.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnFoodView.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnFoodView.FillColor = System.Drawing.Color.Orange;
-            this.btnFoodView.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFoodView.ForeColor = System.Drawing.Color.Black;
-            this.btnFoodView.Location = new System.Drawing.Point(381, 18);
-            this.btnFoodView.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnFoodView.Name = "btnFoodView";
-            this.btnFoodView.Size = new System.Drawing.Size(115, 43);
-            this.btnFoodView.TabIndex = 16;
-            this.btnFoodView.Text = "閲覧";
+            this.btnFoodUpdate.Click += new System.EventHandler(this.btnFoodUpdate_Click);
             // 
             // tabPage3
             // 
@@ -903,7 +929,7 @@
             this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tabPage3.Size = new System.Drawing.Size(961, 536);
+            this.tabPage3.Size = new System.Drawing.Size(961, 538);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "料理カテゴリ";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -927,27 +953,27 @@
             this.dgvCategory.AllowUserToResizeRows = false;
             this.dgvCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCategory.BackgroundColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle59.BackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle59.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle59.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle59.SelectionBackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle59.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle59.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCategory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle59;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCategory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvCategory.ColumnHeadersHeight = 30;
             this.dgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvCategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column6,
             this.Column7});
-            dataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle60.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle60.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle60.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle60.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle60.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle60.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCategory.DefaultCellStyle = dataGridViewCellStyle60;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCategory.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvCategory.EnableHeadersVisualStyles = false;
             this.dgvCategory.Location = new System.Drawing.Point(13, 91);
             this.dgvCategory.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -1131,7 +1157,7 @@
             this.tabPage4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tabPage4.Size = new System.Drawing.Size(961, 536);
+            this.tabPage4.Size = new System.Drawing.Size(961, 538);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "テーブル席";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1155,27 +1181,27 @@
             this.dgvTable.AllowUserToResizeRows = false;
             this.dgvTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTable.BackgroundColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle61.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle61.BackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle61.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle61.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle61.SelectionBackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle61.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle61.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle61;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvTable.ColumnHeadersHeight = 30;
             this.dgvTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
-            dataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle62.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle62.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle62.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle62.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle62.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle62.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTable.DefaultCellStyle = dataGridViewCellStyle62;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTable.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgvTable.EnableHeadersVisualStyles = false;
             this.dgvTable.Location = new System.Drawing.Point(13, 91);
             this.dgvTable.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -1365,7 +1391,7 @@
             this.tabPage5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tabPage5.Size = new System.Drawing.Size(961, 536);
+            this.tabPage5.Size = new System.Drawing.Size(961, 538);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "アカウント";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1421,28 +1447,28 @@
             this.dgvAccount.AllowUserToResizeRows = false;
             this.dgvAccount.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAccount.BackgroundColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle63.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle63.BackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle63.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle63.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle63.SelectionBackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle63.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle63.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAccount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle63;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAccount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvAccount.ColumnHeadersHeight = 30;
             this.dgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvAccount.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
             this.Column8});
-            dataGridViewCellStyle64.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle64.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle64.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle64.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle64.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle64.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle64.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAccount.DefaultCellStyle = dataGridViewCellStyle64;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAccount.DefaultCellStyle = dataGridViewCellStyle16;
             this.dgvAccount.EnableHeadersVisualStyles = false;
             this.dgvAccount.Location = new System.Drawing.Point(13, 91);
             this.dgvAccount.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -1678,51 +1704,54 @@
             this.guna2Button1.Size = new System.Drawing.Size(97, 39);
             this.guna2Button1.TabIndex = 16;
             this.guna2Button1.Text = "戻る";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // colId
+            // colName
             // 
-            this.colId.DataPropertyName = "BillId";
-            this.colId.HeaderText = "伝票番号";
-            this.colId.MinimumWidth = 6;
-            this.colId.Name = "colId";
-            this.colId.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colId.Width = 125;
+            this.colName.DataPropertyName = "FoodName";
+            this.colName.HeaderText = "料理名";
+            this.colName.MinimumWidth = 6;
+            this.colName.Name = "colName";
+            this.colName.ReadOnly = true;
+            this.colName.Width = 142;
             // 
-            // Column2
+            // colCategory
             // 
-            this.Column2.DataPropertyName = "TableName";
-            this.Column2.HeaderText = "テーブル";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column2.Width = 125;
+            this.colCategory.DataPropertyName = "CategoryName";
+            this.colCategory.HeaderText = "カテゴリ名";
+            this.colCategory.MinimumWidth = 6;
+            this.colCategory.Name = "colCategory";
+            this.colCategory.ReadOnly = true;
+            this.colCategory.Width = 120;
             // 
-            // colDate
+            // colPrice
             // 
-            this.colDate.DataPropertyName = "CheckoutDate";
-            this.colDate.HeaderText = "入店日";
-            this.colDate.MinimumWidth = 6;
-            this.colDate.Name = "colDate";
-            this.colDate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colDate.Width = 125;
+            this.colPrice.DataPropertyName = "Price";
+            this.colPrice.HeaderText = "単価(税込)";
+            this.colPrice.MinimumWidth = 6;
+            this.colPrice.Name = "colPrice";
+            this.colPrice.ReadOnly = true;
+            this.colPrice.Width = 80;
             // 
-            // Column4
+            // colDelete
             // 
-            this.Column4.DataPropertyName = "Discount";
-            this.Column4.HeaderText = "割引";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column4.Width = 125;
+            this.colDelete.HeaderText = "削除";
+            this.colDelete.MinimumWidth = 6;
+            this.colDelete.Name = "colDelete";
+            this.colDelete.ReadOnly = true;
+            this.colDelete.Text = "✕";
+            this.colDelete.UseColumnTextForButtonValue = true;
+            this.colDelete.Width = 70;
             // 
-            // colTotal
+            // colFoodId
             // 
-            this.colTotal.DataPropertyName = "Total";
-            this.colTotal.HeaderText = "合計金額";
-            this.colTotal.MinimumWidth = 6;
-            this.colTotal.Name = "colTotal";
-            this.colTotal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colTotal.Width = 125;
+            this.colFoodId.DataPropertyName = "FoodId";
+            this.colFoodId.HeaderText = "food_id";
+            this.colFoodId.MinimumWidth = 6;
+            this.colFoodId.Name = "colFoodId";
+            this.colFoodId.ReadOnly = true;
+            this.colFoodId.Visible = false;
+            this.colFoodId.Width = 125;
             // 
             // FrmAdminManagement
             // 
@@ -1739,6 +1768,8 @@
             this.guna2TabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEarning)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -1763,7 +1794,6 @@
         private Guna.UI2.WinForms.Guna2TabControl guna2TabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label lblTotalCase;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label lblFirstPage;
@@ -1780,17 +1810,11 @@
         private Guna.UI2.WinForms.Guna2Button btnFilterByDateToDate;
         private System.Windows.Forms.TabPage tabPage2;
         private Guna.UI2.WinForms.Guna2Button btnClear;
-        private Guna.UI2.WinForms.Guna2TextBox txtFoodId;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private Guna.UI2.WinForms.Guna2ComboBox cboCategoryFood;
         private System.Windows.Forms.DataGridView dgvFood;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private Guna.UI2.WinForms.Guna2TextBox txtFoodName;
         private Guna.UI2.WinForms.Guna2TextBox txtFoodPrice;
         private System.Windows.Forms.Label label3;
@@ -1799,9 +1823,7 @@
         private Guna.UI2.WinForms.Guna2Button btnFoodSearch;
         private Guna.UI2.WinForms.Guna2TextBox txtFoodSearch;
         private Guna.UI2.WinForms.Guna2Button btnFoodAdd;
-        private Guna.UI2.WinForms.Guna2Button btnFoodDelete;
         private Guna.UI2.WinForms.Guna2Button btnFoodUpdate;
-        private Guna.UI2.WinForms.Guna2Button btnFoodView;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgvCategory;
@@ -1859,5 +1881,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTotal;
+        private System.Windows.Forms.Label lblTotalCase;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtFilTer;
+        private Guna.UI2.WinForms.Guna2Button btnFilterCondClear;
+        private System.Windows.Forms.RadioButton rdBillId;
+        private System.Windows.Forms.RadioButton rdTableName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCategory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPrice;
+        private System.Windows.Forms.DataGridViewButtonColumn colDelete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFoodId;
     }
 }

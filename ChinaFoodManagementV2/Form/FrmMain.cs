@@ -18,9 +18,11 @@ namespace ChinaFoodManagementV2
     public partial class FrmMain : Form
     {
         long cashierWG = 0;
-        public FrmMain()
+        private string userName;
+        public FrmMain(string userName)
         {
             InitializeComponent();
+            this.userName = userName;
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
@@ -29,6 +31,8 @@ namespace ChinaFoodManagementV2
             LoadTable();
             LoadTableFull();
             LoadTableEmpty();
+
+            lblUserName.Text = userName;
         }
 
         private void LoadTable()
@@ -360,9 +364,30 @@ namespace ChinaFoodManagementV2
         private void 管理者ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmAdminManagement frmAdminManagement = new FrmAdminManagement();
-            frmAdminManagement.Show(this);
+            frmAdminManagement.Show();
+            //frmAdminManagement.FoodAdded += FrmAdminManagement_FoodAdded;
+            frmAdminManagement.FormClosed += FrmAdminManagement_FormClosed;
+            this.Hide();
+        }
+
+        private void FrmAdminManagement_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
+        }
+
+        private void FrmAdminManagement_FoodAdded(object sender, EventArgs e)
+        {
+
         }
         #endregion
 
+        private void 個人情報ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void Test_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
+        }
     }
 }

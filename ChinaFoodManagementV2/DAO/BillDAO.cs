@@ -3,14 +3,12 @@ using ChinaFoodManagementV2.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ChinaFoodManagementV2.DTO;
-using System.Web.Management;
-using System.Diagnostics.Eventing.Reader;
 using System.Data.Entity;
 using System.Linq.Dynamic.Core;
+using System.ComponentModel;
+using System.Runtime.InteropServices.ComTypes;
 
 namespace ChinaFoodManagementV2.DAO
 {
@@ -118,17 +116,19 @@ namespace ChinaFoodManagementV2.DAO
             }
         }
 
-        public List<BillMngDTO> GetBillByCondition(DateTime currentDate, DateTime? startDate = null, DateTime? endDate = null)
+        public (List<BillMngDTO> bills, int totalCase, int totalPage) 
+        GetBillByCondition(int currentPage, DateTime startDate, DateTime endDate, int sortBy, ListSortDirection sortDirection, string filterCond, string filterText = null)
         {
+            int totalCase;
+            int totalPage;
             List<BillMngDTO> billMngDTOs = new List<BillMngDTO>();
 
             using (var context = new ChinaFoodDBContext())
             {
                 var query = from b in context.Bills
                             join t in context.Tables on b.TableId equals t.Id
-                            where (startDate == null && endDate == null && b.DateCheckout.Date == currentDate.Date) ||
-                                  (startDate != null && endDate != null && b.DateCheckout >= startDate.Value.AddDays(-1) && b.DateCheckout <= endDate)
-                                  && b.StatusPaid == 1
+                            where b.DateCheckout.Date >= startDate.Date && b.DateCheckout.Date <= endDate && b.StatusPaid == 1
+                                  
                             select new BillMngDTO
                             {
                                 BillId = b.Id,
@@ -138,39 +138,62 @@ namespace ChinaFoodManagementV2.DAO
                                 Total = b.TotalPrice
                             };
 
+                if (!string.IsNullOrEmpty(filterText))
+                {
+                    if (filterCond == "伝票番号")
+                    {
+                        int filterId;
+                        if (int.TryParse(filterText, out filterId))
+                        {
+                            query = query.Where(b => b.BillId == filterId);
+                        }
+                    }
+                    else if (filterCond == "テーブル名")
+                    {
+                        query = query.Where(b => b.TableName.Contains(filterText));
+                    }
+                }
+
+                if (sortBy == 0)
+                {
+                    query = (sortDirection == ListSortDirection.Ascending) ? query.OrderBy(b => b.BillId) : query.OrderByDescending(b => b.BillId);
+                }
+                else if(sortBy == 1)
+                {
+                    query = (sortDirection == ListSortDirection.Ascending) ? query.OrderBy(b => b.CheckoutDate) : query.OrderByDescending(b => b.CheckoutDate);
+                }
+                else
+                {
+                    query = (sortDirection == ListSortDirection.Ascending) ? query.OrderBy(b => b.Total) : query.OrderByDescending(b => b.Total);
+                }
+
+                totalCase = query.Count();
+                totalPage = (int)Math.Ceiling((double)totalCase / 15);
+                billMngDTOs = query.Skip((currentPage - 1) * 15).Take(15).ToList();
+            }
+            return (billMngDTOs, totalCase, totalPage);
+        }
+
+        public List<BillMngDTO> GetAllBill()
+        {
+            List<BillMngDTO> billMngDTOs = new List<BillMngDTO>();
+            using (var context = new ChinaFoodDBContext())
+            {
+                var query = from b in context.Bills
+                            join t in context.Tables on b.TableId equals t.Id
+                            where b.StatusPaid == 1
+                            select new BillMngDTO
+                            {
+                                BillId = b.Id,
+                                TableName = t.TableName,
+                                CheckoutDate = b.DateCheckout,
+                                Discount = b.Discount,
+                                Total = b.TotalPrice
+                            };
                 billMngDTOs = query.ToList();
             }
 
             return billMngDTOs;
         }
-
-        public int GetAllBill()
-        {
-            using(var context =  new ChinaFoodDBContext())
-            {
-                return context.Bills.Count(b => b.StatusPaid == 1);
-            }
-        }
-
-        public List<BillMngDTO> GetBillByPage(int startIndex, int maxRecords)
-        {
-            using (var context = new ChinaFoodDBContext())
-            {
-                var query = from b in context.Bills
-                            join t in context.Tables on b.TableId equals t.Id
-                            select new BillMngDTO
-                            {
-                                BillId = b.Id,
-                                TableName = t.TableName,
-                                CheckoutDate = b.DateCheckout,
-                                Discount = b.Discount,
-                                Total = b.TotalPrice
-                            };
-
-                return query.Skip(startIndex).Take(maxRecords).ToList();
-            }
-        }
-
-
     }
 }
